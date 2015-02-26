@@ -1,5 +1,8 @@
 <?php
 	
+if ( ! isset( $content_width ) )
+	$content_width = 940;
+
 // Register Theme Features
 function yogameister()  {
 	remove_action( 'wp_head', 'wp_generator' );
@@ -65,38 +68,38 @@ register_sidebar( array(
 // Register Carousel Post Type
 function carousel() {
 	$labels = array(
-		'name'                => _x( 'Carousels', 'Post Type General Name', 'ym' ),
-		'singular_name'       => _x( 'Carousel', 'Post Type Singular Name', 'ym' ),
-		'menu_name'           => __( 'Carousels', 'ym' ),
+		'name'				=> _x( 'Carousels', 'Post Type General Name', 'ym' ),
+		'singular_name'	   => _x( 'Carousel', 'Post Type Singular Name', 'ym' ),
+		'menu_name'		   => __( 'Carousels', 'ym' ),
 		'parent_item_colon'   => __( 'Parent Carousel:', 'ym' ),
-		'all_items'           => __( 'All Carousels', 'ym' ),
-		'view_item'           => __( 'View Carousel', 'ym' ),
-		'add_new_item'        => __( 'Add New Carousel', 'ym' ),
-		'add_new'             => __( 'Add New', 'ym' ),
-		'edit_item'           => __( 'Edit Carousel', 'ym' ),
-		'update_item'         => __( 'Update Carousel', 'ym' ),
-		'search_items'        => __( 'Search Carousel', 'ym' ),
-		'not_found'           => __( 'Not found', 'ym' ),
+		'all_items'		   => __( 'All Carousels', 'ym' ),
+		'view_item'		   => __( 'View Carousel', 'ym' ),
+		'add_new_item'		=> __( 'Add New Carousel', 'ym' ),
+		'add_new'			 => __( 'Add New', 'ym' ),
+		'edit_item'		   => __( 'Edit Carousel', 'ym' ),
+		'update_item'		 => __( 'Update Carousel', 'ym' ),
+		'search_items'		=> __( 'Search Carousel', 'ym' ),
+		'not_found'		   => __( 'Not found', 'ym' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'ym' ),
 	);
 	$args = array(
-		'label'               => __( 'carousel', 'ym' ),
-		'description'         => __( 'Home Page Carousel', 'ym' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'thumbnail', ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
+		'label'			   => __( 'carousel', 'ym' ),
+		'description'		 => __( 'Home Page Carousel', 'ym' ),
+		'labels'			  => $labels,
+		'supports'			=> array( 'title', 'thumbnail', ),
+		'taxonomies'		  => array( 'category', 'post_tag' ),
+		'hierarchical'		=> false,
+		'public'			  => true,
+		'show_ui'			 => true,
+		'show_in_menu'		=> true,
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'can_export'          => true,
-		'has_archive'         => false,
+		'menu_position'	   => 5,
+		'can_export'		  => true,
+		'has_archive'		 => false,
 		'exclude_from_search' => true,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
+		'capability_type'	 => 'page',
 	);
 	register_post_type( 'carousel', $args );
 }
@@ -105,38 +108,38 @@ add_action( 'init', 'carousel', 0 );
 // Register Location Post Type
 function location() {
 	$labels = array(
-		'name'                => _x( 'Locations', 'Post Type General Name', 'ym' ),
-		'singular_name'       => _x( 'Location', 'Post Type Singular Name', 'ym' ),
-		'menu_name'           => __( 'Locations', 'ym' ),
+		'name'				=> _x( 'Locations', 'Post Type General Name', 'ym' ),
+		'singular_name'	   => _x( 'Location', 'Post Type Singular Name', 'ym' ),
+		'menu_name'		   => __( 'Locations', 'ym' ),
 		'parent_item_colon'   => __( 'Parent Location:', 'ym' ),
-		'all_items'           => __( 'All Locations', 'ym' ),
-		'view_item'           => __( 'View Location', 'ym' ),
-		'add_new_item'        => __( 'Add New Location', 'ym' ),
-		'add_new'             => __( 'Add New', 'ym' ),
-		'edit_item'           => __( 'Edit Location', 'ym' ),
-		'update_item'         => __( 'Update Location', 'ym' ),
-		'search_items'        => __( 'Search Locations', 'ym' ),
-		'not_found'           => __( 'Not found', 'ym' ),
+		'all_items'		   => __( 'All Locations', 'ym' ),
+		'view_item'		   => __( 'View Location', 'ym' ),
+		'add_new_item'		=> __( 'Add New Location', 'ym' ),
+		'add_new'			 => __( 'Add New', 'ym' ),
+		'edit_item'		   => __( 'Edit Location', 'ym' ),
+		'update_item'		 => __( 'Update Location', 'ym' ),
+		'search_items'		=> __( 'Search Locations', 'ym' ),
+		'not_found'		   => __( 'Not found', 'ym' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'ym' ),
 	);
 	$args = array(
-		'label'               => __( 'locations', 'ym' ),
-		'description'         => __( 'Locations', 'ym' ),
-		'labels'              => $labels,
-		'supports'            => array('title', 'thumbnail' ),
-		'taxonomies'          => array( ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
+		'label'			   => __( 'locations', 'ym' ),
+		'description'		 => __( 'Locations', 'ym' ),
+		'labels'			  => $labels,
+		'supports'			=> array('title', 'thumbnail' ),
+		'taxonomies'		  => array( ),
+		'hierarchical'		=> false,
+		'public'			  => true,
+		'show_ui'			 => true,
+		'show_in_menu'		=> true,
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'can_export'          => true,
-		'has_archive'         => true,
+		'menu_position'	   => 5,
+		'can_export'		  => true,
+		'has_archive'		 => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
+		'capability_type'	 => 'page',
 	);
 	register_post_type( 'location', $args );
 }
@@ -145,42 +148,82 @@ add_action( 'init', 'location', 0 );
 // Register Teacher Post Type
 function teacher() {
 	$labels = array(
-		'name'                => _x( 'Teacher', 'Post Type General Name', 'ym' ),
-		'singular_name'       => _x( 'Teacher', 'Post Type Singular Name', 'ym' ),
-		'menu_name'           => __( 'Teachers', 'ym' ),
+		'name'				=> _x( 'Teacher', 'Post Type General Name', 'ym' ),
+		'singular_name'	   => _x( 'Teacher', 'Post Type Singular Name', 'ym' ),
+		'menu_name'		   => __( 'Teachers', 'ym' ),
 		'parent_item_colon'   => __( 'Parent Teacher:', 'ym' ),
-		'all_items'           => __( 'All Teachers', 'ym' ),
-		'view_item'           => __( 'View Teacher', 'ym' ),
-		'add_new_item'        => __( 'Add New Teacher', 'ym' ),
-		'add_new'             => __( 'Add New', 'ym' ),
-		'edit_item'           => __( 'Edit Teacher', 'ym' ),
-		'update_item'         => __( 'Update Teacher', 'ym' ),
-		'search_items'        => __( 'Search Teachers', 'ym' ),
-		'not_found'           => __( 'Not found', 'ym' ),
+		'all_items'		   => __( 'All Teachers', 'ym' ),
+		'view_item'		   => __( 'View Teacher', 'ym' ),
+		'add_new_item'		=> __( 'Add New Teacher', 'ym' ),
+		'add_new'			 => __( 'Add New', 'ym' ),
+		'edit_item'		   => __( 'Edit Teacher', 'ym' ),
+		'update_item'		 => __( 'Update Teacher', 'ym' ),
+		'search_items'		=> __( 'Search Teachers', 'ym' ),
+		'not_found'		   => __( 'Not found', 'ym' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'ym' ),
 	);
 	$args = array(
-		'label'               => __( 'teachers', 'ym' ),
-		'description'         => __( 'Teachers', 'ym' ),
-		'labels'              => $labels,
-		'supports'            => array('title',  'editor', 'thumbnail', 'excerpt' ),
-		'taxonomies'          => array( ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
+		'label'			   => __( 'teachers', 'ym' ),
+		'description'		 => __( 'Teachers', 'ym' ),
+		'labels'			  => $labels,
+		'supports'			=> array('title',  'editor', 'thumbnail', 'excerpt' ),
+		'taxonomies'		  => array( ),
+		'hierarchical'		=> false,
+		'public'			  => true,
+		'show_ui'			 => true,
+		'show_in_menu'		=> true,
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'can_export'          => true,
-		'has_archive'         => true,
+		'menu_position'	   => 5,
+		'can_export'		  => true,
+		'has_archive'		 => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
+		'capability_type'	 => 'page',
 	);
 	register_post_type( 'teacher', $args );
 }
 add_action( 'init', 'teacher', 0 );
+
+// Register Testimonial Post Type
+function testimonial() {
+	$labels = array(
+		'name'				=> _x( 'Testimonials', 'Post Type General Name', 'ym' ),
+		'singular_name'	   => _x( 'Testimonials', 'Post Type Singular Name', 'ym' ),
+		'menu_name'		   => __( 'Testimonials', 'ym' ),
+		'parent_item_colon'   => __( 'Parent Testimonial:', 'ym' ),
+		'all_items'		   => __( 'All Testimonials', 'ym' ),
+		'view_item'		   => __( 'View Testimonial', 'ym' ),
+		'add_new_item'		=> __( 'Add New Testimonial', 'ym' ),
+		'add_new'			 => __( 'Add New', 'ym' ),
+		'edit_item'		   => __( 'Edit Testimonial', 'ym' ),
+		'update_item'		 => __( 'Update Testimonial', 'ym' ),
+		'search_items'		=> __( 'Search Testimonials', 'ym' ),
+		'not_found'		   => __( 'Not found', 'ym' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'ym' ),
+	);
+	$args = array(
+		'label'			   => __( 'Testimonials', 'ym' ),
+		'description'		 => __( 'Testimonials', 'ym' ),
+		'labels'			  => $labels,
+		'supports'			=> array('title',  'editor', 'excerpt' ),
+		'taxonomies'		  => array( ),
+		'hierarchical'		=> false,
+		'public'			  => true,
+		'show_ui'			 => true,
+		'show_in_menu'		=> true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'	   => 5,
+		'can_export'		  => true,
+		'has_archive'		 => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'	 => 'page',
+	);
+	register_post_type( 'testimonial', $args );
+}
+add_action( 'init', 'testimonial', 0 );
 
 class Walker_Page_Custom extends Walker_Nav_menu{
 	function start_lvl(&$output, $depth=0, $args=array()){
@@ -314,34 +357,14 @@ function be_initialize_cmb_meta_boxes() {
 	}
 }
 
-function my_text_strings( $translated_text, $text, $domain ) {
-	switch ( $translated_text ) {
-		case 'Read more' :
-			$translated_text = __( 'Check availability', 'woocommerce-bookings' );
-		break;
-		case 'Number required:' :
-			$translated_text = __( 'Location:', 'woocommerce-bookings' );
-		break;
-		
-	}
-	return $translated_text;
+function testimonials_to_pages() {
+	p2p_register_connection_type( array(
+		'name' => 'testimonials_to_pages',
+		'from' => 'testimonial',
+		'to' => 'page'
+	) );
 }
-add_filter( 'gettext', 'my_text_strings', 20, 3 );
-
-function tribe_get_event_website_button( $event = null, $label = 'Book Now' ) {
-	$url = tribe_get_event_website_url( $event );
-	if ( ! empty( $url ) ) {
-		$label = is_null( $label ) ? $url : $label;
-		$html  = sprintf(
-			'<a href="%s" target="_blank">%s</a>',
-			$url,
-			'Book Now'
-		);
-	} else {
-		$html = '';
-	}
-	return apply_filters( 'tribe_get_event_website_button', $html );
-}
+add_action( 'p2p_init', 'testimonials_to_pages' );
 
 // Add Custom Post Types to Dashboard
 add_action( 'dashboard_glance_items', 'my_add_cpt_to_dashboard' );
@@ -387,7 +410,7 @@ function add_menu_icons_styles(){
 	#adminmenu #menu-posts-location div.wp-menu-image:before, #dashboard_right_now .location-count a:before {
 		content: "\f231";
 	}
-	#adminmenu #menu-posts-class div.wp-menu-image:before, #dashboard_right_now .class-count a:before {
+	#adminmenu #menu-posts-testimonial div.wp-menu-image:before, #dashboard_right_now .testimonial-count a:before {
 		content: "\f484";
 	}
 	#adminmenu #menu-posts-carousel div.wp-menu-image:before, #dashboard_right_now .carousel-count a:before {
