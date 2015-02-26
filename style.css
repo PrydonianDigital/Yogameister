@@ -1,0 +1,487 @@
+/*  
+Theme Name: Yogameister
+Theme URI: http://www.yogameister.co.uk/
+Description: Theme for Yogameister
+Version: 1
+Author: Mark Duwe
+Author URI: http://prydonian.digital
+Tags: 
+License: Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
+*/
+
+body {
+	background: #979fa2; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk3OWZhMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI2I5YzFjMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iI2JlYzZjOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2Q0ZDlkYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkwJSIgc3RvcC1jb2xvcj0iI2QyZDdkYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOGNkZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #979fa2 0%, #b9c1c3 70%, #bec6c9 75%, #d4d9dc 80%, #d2d7da 90%, #c8cdd1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#979fa2), color-stop(70%,#b9c1c3), color-stop(75%,#bec6c9), color-stop(80%,#d4d9dc), color-stop(90%,#d2d7da), color-stop(100%,#c8cdd1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #979fa2 0%,#b9c1c3 70%,#bec6c9 75%,#d4d9dc 80%,#d2d7da 90%,#c8cdd1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #979fa2 0%,#b9c1c3 70%,#bec6c9 75%,#d4d9dc 80%,#d2d7da 90%,#c8cdd1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #979fa2 0%,#b9c1c3 70%,#bec6c9 75%,#d4d9dc 80%,#d2d7da 90%,#c8cdd1 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #979fa2 0%,#b9c1c3 70%,#bec6c9 75%,#d4d9dc 80%,#d2d7da 90%,#c8cdd1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#979fa2', endColorstr='#c8cdd1',GradientType=0 ); /* IE6-8 */
+	background-attachment: fixed;
+	color: #333;
+}
+table {
+	background-color: transparent;
+}
+img {
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+#footer {
+	width: 100%;
+	margin: 0;
+	color: #111;
+	padding: 10px 0;
+	font-size: 0.85rem;
+}
+#footer img {
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+	float: left;
+	box-shadow: none;
+}
+hr { 
+	height: 30px; 
+	border-style: solid; 
+	border-color: #111; 
+	border-width: 1px 0 0 0; 
+	border-radius: 20px; 
+	margin-top: 40px;
+	margin-bottom: 0;
+}
+hr:before {
+	display: block; 
+	content: ""; 
+	height: 30px; 
+	margin-top: -31px; 
+	border-style: solid; 
+	border-color: #111; 
+	border-width: 0 0 1px 0; 
+	border-radius: 20px;
+}
+a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: #9B341C;
+}
+a:hover {
+	color: #220B06;
+}
+.navbar {
+	background: transparent;
+}
+.navbar .logo a img {
+	margin-top: 2.5%;
+	box-shadow: none !important;
+}
+.navbar#nav2 {
+     margin-top: 20px;
+     margin-bottom: 0;
+}
+.navbar ul {
+	line-height: 
+}
+.navbar ul li > a {
+	text-decoration: none;
+	color: #111;
+	text-shadow: 0 1px 2px rgba(226,226,226,0.5);
+	font-weight: 700;
+}
+.navbar ul li.active > a, .navbar ul li.current-menu-item > a, .navbar ul li.current_page_item > a, .navbar ul li.current_page_parent > a, .navbar ul li.dropdown li.active > a, .navbar ul li > a:hover, .single-class .navbar ul li.menu-item-class > a, .single-location .navbar ul li.menu-item-locations > a, .single-teacher .navbar ul li.menu-item-teacher > a {
+	background: #e2e2e2;
+}
+.navbar li .dropdown ul > li a {
+	background: #111;
+	color: #fff;	
+}
+.gumby-no-touch .navbar li .dropdown ul > li a:hover , .gumby-no-touch .navbar li .dropdown ul > li.current-menu-item a {
+	background: #868d92;
+	color: #fff;	
+}
+.navbar .menu {
+	float: left;
+}
+time, .updated {
+	display: none;
+}
+.class, .location, .teacher {
+	border-bottom: 1px solid #979fa2;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.location p {
+	margin-bottom: 0;
+}
+.sticky .recurringinfo {
+	display: inline-block;
+}
+.sticky .tribe-events-tooltip {
+	display: none;
+}
+.sticky h5 {
+	font-weight: 700;
+	font-size: 0.85rem;
+}
+.navbar li.current-menu-item > a {
+	background: #868d92;
+}
+#wc-bookings-booking-form .label, .wc-bookings-booking-form fieldset legend small {
+	color: #111;
+	padding: 5px;
+	font-size: 1rem;
+}
+.picker {
+	width: 100%;
+}
+.picker:after {
+	content: "";
+}
+.wc-bookings-date-picker .ui-datepicker .ui-datepicker-title {
+     font-weight: 400;
+     line-height: 1em;
+     padding: 0.5em 0;
+}
+.wc-bookings-date-picker .ui-datepicker-header, .wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev, .wc-bookings-date-picker .ui-datepicker .ui-datepicker-next {
+	background: #111;
+}
+.wc-bookings-date-picker .ui-datepicker td.bookable a, .wc-bookings-date-picker .ui-datepicker td.ui-datepicker-current-day a {
+	background: #111;
+}
+.wc-bookings-date-picker .ui-datepicker td.fully_booked span {
+	background: #454545 !important;
+	color: #000 !important;
+}
+form fieldset {
+     padding: 0.5em 1.5em;
+}
+.tribe-events-cal-links {
+	clear: both;
+}
+dd.url {
+	word-wrap: break-word;
+}
+a.cart {
+	text-decoration: none;
+	display: block;
+	padding: 10px 5px;
+	font-size: 0.95rem;
+	text-align: center;
+	background: #111;
+	color: #fff;
+	border-radius: 0 0 10px 10px;
+}
+a.cart:hover {
+	background: #868d92;
+}
+.alignleft {
+	float: left;
+	margin: 0 20px 0 0;
+}
+.alignright {
+	float: right !important;
+	margin: 0 0 0 20px;
+}
+#gmap {
+	width: 100%;
+	max-width: 100%;
+	height: 320px;
+}
+.label label {
+	color: #111;
+}
+.label {
+	padding: 10px 10px 10px 0;
+	border-top: 0;
+}
+.value {
+	padding: 10px 10px 10px 0;
+	border-top: 0;
+}
+.variations tr {
+	border-top: 1px solid #e5e5e5;
+}
+.woocommerce ul.products li.product h3, .woocommerce-page ul.products li.product h3 {
+     font-size: 1em;
+     margin: 0;
+     padding: 0 0 0.2em 0;
+	font-weight: 600;
+}
+span.price, .woocommerce div.product p.price, .woocommerce #content div.product span.price, .woocommerce #content div.product p.price, .woocommerce-page div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page #content div.product p.price {
+     color: #555;
+     font-size: 1.25em;
+}
+.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price {
+     display: block;
+     font-weight: 400;
+     margin-bottom: 0.5em;
+     font-size: 0.9em;
+     color: #007A21;
+}
+.woocommerce h1.product_title {
+	font-size: 2rem;
+}
+.woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price del {
+     color: rgba(145, 145, 145, 0.5);
+     font-size: 0.9em;
+     margin: -2px 0 0;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+     text-align: center;
+}
+.woocommerce .woocommerce-breadcrumb, .woocommerce .woocommerce-breadcrumb a {
+	font-weight: 600;
+	color: #555;
+}
+.woocommerce span.onsale, .woocommerce-page span.onsale {
+     background: #111;
+     border-radius: 20px;
+     box-shadow: none;
+     color: #fff;
+     font-size: 12px;
+     font-weight: 700;
+     left: 6px;
+     line-height: 32px;
+     margin: 0;
+     min-height: 32px;
+     min-width: 42px;
+     padding: 4px;
+     position: absolute;
+     text-align: center;
+     text-shadow: none;
+     top: 6px;
+     border: 1px solid #fff;
+}
+.woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt {
+     background: #111;
+     border-color: #76456c;
+     color: #fff;
+     text-shadow: none;
+}
+.woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover {
+	background: #ccc;
+	color: #ddd;
+     border-color: #eee;
+}
+.woocommerce #content input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover {
+     background: #868d92;
+     border-color: #76456c;
+     color: #fff;
+     text-shadow: none;
+}
+.woocommerce #content .quantity input.qty, .woocommerce .quantity input.qty, .woocommerce-page #content .quantity input.qty, .woocommerce-page .quantity input.qty {
+     -moz-appearance: textfield;
+     -moz-border-bottom-colors: none;
+     -moz-border-left-colors: none;
+     -moz-border-right-colors: none;
+     -moz-border-top-colors: none;
+     border-color: #c8bfc6 -moz-use-text-color #c8bfc6 #c8bfc6;
+     border-image: none;
+     border-radius: 2px 0 0 2px;
+     border-style: solid none solid solid;
+     border-width: 1px 0 1px 1px;
+     box-shadow: 0 0 2px 0 #f7f6f7 inset;
+     float: left;
+     font-weight: 700;
+     height: 34px;
+     margin: 0;
+     padding: 0;
+     text-align: center;
+     width: 40px;
+}
+.woocommerce #content .quantity .minus, .woocommerce #content .quantity .plus, .woocommerce .quantity .minus, .woocommerce .quantity .plus, .woocommerce-page #content .quantity .minus, .woocommerce-page #content .quantity .plus, .woocommerce-page .quantity .minus, .woocommerce-page .quantity .plus {
+     background: -moz-linear-gradient(center top , #f7f6f7 0px, #e0dadf 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+     border: 1px solid #c8bfc6;
+     border-radius: 2px;
+     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.075) inset, 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 2px rgba(0, 0, 0, 0.1);
+     color: #5e5e5e;
+     cursor: pointer;
+     display: block;
+     font-size: 12px;
+     font-weight: 700;
+     height: 18px;
+     line-height: 13px;
+     margin: 0;
+     overflow: visible;
+     padding: 0;
+     position: absolute;
+     text-align: center;
+     text-decoration: none;
+     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+     vertical-align: text-top;
+     width: 20px;
+}
+.product_meta .sku_wrapper, .product_meta .posted_in {
+	display: block;
+}
+table thead th, table tbody td, table tr td {
+     vertical-align: middle;
+}
+.woocommerce .cart-collaterals .cart_totals table th, .woocommerce-page .cart-collaterals .cart_totals table th {
+     padding: 6px;
+     width: 25%;
+}
+.woocommerce .cart-collaterals .cart_totals table td, .woocommerce .cart-collaterals .cart_totals table th, .woocommerce-page .cart-collaterals .cart_totals table td, .woocommerce-page .cart-collaterals .cart_totals table th {
+     padding: 6px;
+     vertical-align: middle;
+}
+.woocommerce #reviews #comments ol.commentlist li .meta {
+	color: #666;
+}
+form.checkout {
+	margin-bottom: 90px;
+}
+table thead {
+     background-color: #111;
+     color: #fff;
+}
+.tribe-events-list .tribe-events-event-image {
+     float: left;
+     margin: 0 3% 0 0;
+     width: 14.8936%;
+}
+.tribe-events-list .tribe-events-event-image + div.tribe-events-content {
+     float: left;
+     position: relative;
+     width: 82.1064%;
+}
+.sticky .tribe-events-venue-details {
+     display: block;
+     line-height: 1.2;
+     margin: 5px 0 15px 0;
+     font-weight: 700;
+     font-size: 0.85rem;
+}
+table {
+    border: 1px solid #e5e5e5 !important;
+}
+table td.add-to-cart {
+	padding: 5px;
+}
+.tribe-events-list .tribe-events-event-cost span {
+    background: none;
+    border: none;
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 5px 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+div.image {
+	position: relative;
+	overflow: hidden;
+}
+.image .overlay {
+	position: absolute;
+	top: 100%;
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	padding: 60px;
+	-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.image .overlay h5 {
+	color: #fff;
+}
+.image h4 {
+    font-size: 1.1rem;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	padding: 5px 10px 5px 20px;
+	background: #FF5C77;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 1px 0 1px #660011;
+    text-overflow: ellipsis;
+	z-index: 100;
+}
+.image h4 a {
+	color: #660011;
+	text-shadow: #d65c5c 0 1px 0;
+	font-weight: 700;
+}
+div.image:hover .overlay {
+	top: 0;
+}
+.image .tribe-events-event-cost {
+	background: #FF5C77;
+    border: none;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.0665em;
+    padding: 5px 20px 5px 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+    position: absolute;
+    top: 20px;
+	color: #660011;
+	text-shadow: #d65c5c 0 1px 0;
+    right: 0;
+    border-radius: 5px 0 0 5px;
+	box-shadow: -1px 0 1px #660011;
+	z-index: 100;
+}
+.image .overlay .recurringinfo {
+	display: none;
+}
+.ic_container{
+	vertical-align: baseline;
+	margin: 10px;
+	position: relative;
+	opacity: 0;
+}
+.ic_caption {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	padding: 5px 10px 5px 20px;
+	background: #FF5C77;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 1px 0 1px #660011;
+    text-overflow: ellipsis;
+}
+.ic_caption h3 {
+    font-size: 1.1rem;
+	color: #660011;
+	text-shadow: #d65c5c 0 1px 0;
+	font-weight: 700;
+}
+.ic_caption p {
+
+}
+.tribe_events ul, .summary ul {
+	margin: 5px 0 5px 20px;
+	padding: 0 0 0 20px;
+	list-style: disc;
+}
+.owl-theme .owl-controls {
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 1em;
+}
+.owl-theme .owl-controls .owl-buttons div {
+	display: none;
+}
+.owl-theme .owl-controls .owl-page span {
+	background: #136972;
+}
+.owl-item img {
+	min-height: 170px;
+}
+.tribe-events-loop {
+	position: relative;
+}
+.ticket-sales-expired, .ee-event-datetimes-ul {
+	display: none;
+}
+#espresso_calendar, .event-content, #ee-spco-attendee_information-reg-step-form {
+	margin-bottom: 90px;
+}
+.fb-social-plugin, .fb-social-plugin span, .fb-social-plugin iframe {
+	width: 100% !important;
+}
