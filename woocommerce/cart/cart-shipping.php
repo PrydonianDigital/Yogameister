@@ -1,21 +1,25 @@
 <?php
 /**
- * delivery/collection Methods Display
+ * Shipping Methods Display
  *
  * In 2.1 we show methods per package. This allows for multiple methods per order if so desired.
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.1.0
+ * @version     2.3.0
  */
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
 ?>
 <tr class="shipping">
 	<th><?php
 		if ( $show_package_details ) {
 			printf( __( 'Shipping #%d', 'woocommerce' ), $index + 1 );
 		} else {
-			_e( 'Delivery Options', 'woocommerce' );
+			_e( 'Shipping and Handling', 'woocommerce' );
 		}
 	?></th>
 	<td>
@@ -52,15 +56,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 			<?php if ( is_cart() && get_option( 'woocommerce_enable_shipping_calc' ) === 'yes' ) : ?>
 
-				<p><?php _e( 'Please use the delivery/collection calculator to see available delivery/collection methods.', 'woocommerce' ); ?></p>
+				<p><?php _e( 'Please use the shipping calculator to see available shipping methods.', 'woocommerce' ); ?></p>
 
 			<?php elseif ( is_cart() ) : ?>
 
-				<p><?php _e( 'Please continue to the checkout and enter your full address to see if there are any available delivery/collection methods.', 'woocommerce' ); ?></p>
+				<p><?php _e( 'Please continue to the checkout and enter your full address to see if there are any available shipping methods.', 'woocommerce' ); ?></p>
 
 			<?php else : ?>
 
-				<p><?php _e( 'Please fill in your details to see available delivery/collection methods.', 'woocommerce' ); ?></p>
+				<p><?php _e( 'Please fill in your details to see available shipping methods.', 'woocommerce' ); ?></p>
 
 			<?php endif; ?>
 
@@ -69,13 +73,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			<?php if ( is_cart() ) : ?>
 
 				<?php echo apply_filters( 'woocommerce_cart_no_shipping_available_html',
-					'<div class="woocommerce-info"><p>' . __( 'There doesn&lsquo;t seem to be any available delivery/collection methods. Please double check your address, or contact us if you need any help.', 'woocommerce' ) . '</p></div>'
+					'<div class="woocommerce-info"><p>' . __( 'There are no shipping methods available. Please double check your address, or contact us if you need any help.', 'woocommerce' ) . '</p></div>'
 				); ?>
 
 			<?php else : ?>
 
 				<?php echo apply_filters( 'woocommerce_no_shipping_available_html',
-					'<p>' . __( 'There doesn&lsquo;t seem to be any available delivery/collection methods. Please double check your address, or contact us if you need any help.', 'woocommerce' ) . '</p>'
+					'<p>' . __( 'There are no shipping methods available. Please double check your address, or contact us if you need any help.', 'woocommerce' ) . '</p>'
 				); ?>
 
 			<?php endif; ?>
@@ -92,6 +96,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 				echo '<p class="woocommerce-shipping-contents"><small>' . __( 'Shipping', 'woocommerce' ) . ': ' . implode( ', ', $product_names ) . '</small></p>';
 			?>
+		<?php endif; ?>
+
+		<?php if ( is_cart() ) : ?>
+			<?php woocommerce_shipping_calculator(); ?>
 		<?php endif; ?>
 	</td>
 </tr>
