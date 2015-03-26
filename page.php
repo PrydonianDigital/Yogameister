@@ -2,7 +2,7 @@
 
 <div class="row" id="page">
 	
-		<div class="twelve columns">
+		<div class="nine columns">
 	
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
@@ -12,7 +12,13 @@
 		
 		<?php endif; ?>
 	
-	</div>
+		</div>
+	
+		<div class="three columns">
+			<ul>
+				<?php dynamic_sidebar( 'sidebar' ); ?>
+			</ul>
+		</div>
 
 </div>
 

@@ -481,3 +481,9 @@ div.image:hover .overlay {
 .fb-social-plugin, .fb-social-plugin span, .fb-social-plugin iframe {
 	width: 100% !important;
 }
+#quoteauthor {
+	display: block;
+}
+#quoteauthor:before {
+	content: "- "
+}

@@ -56,6 +56,16 @@ function ym_menu() {
 add_action( 'init', 'ym_menu' );
 
 register_sidebar( array(
+	'id' => 'sidebar',
+	'name' => __( 'Sidebar Widgets', 'ch' ),
+	'description' => __( '', 'ym' ),
+	'before_title' => '<h5 class="widget">',
+	'aftch_title' => '</h5>',
+	'before_widget' => '<li id="%1$s" class="widget field %2$s">',
+	'after_widget' => '</li>',
+));
+
+register_sidebar( array(
 	'id' => 'footer',
 	'name' => __( 'Footer Widgets', 'ch' ),
 	'description' => __( '', 'ym' ),
