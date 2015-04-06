@@ -11,7 +11,7 @@ $j(function() {
 		//var bookDate = getUrlVars()['date'];
 		//$j('.picker').datepicker( 'setDate', bookDate ).datepicker( 'refresh' );
 	//}
-	
+
 	$j("#ch-carousel").owlCarousel({
 		items: 1,
 		lazyLoad : true,
@@ -27,14 +27,47 @@ $j(function() {
 		itemsMobile: false,
 		stopOnHover: true
 	});
-	
+
 	$j('.checkout p').addClass('field');
-	
+
 	$j('.checkout input').addClass('input');
 
 	$j('.checkout textarea').addClass('input textarea');
 
-	
+	var divs = $j('.cbp-qtcontent');
+
+			function fade() {
+				var current = $j('.current');
+				var currentIndex = divs.index(current),
+					nextIndex = currentIndex + 1;
+
+				if (nextIndex >= divs.length) {
+					nextIndex = 0;
+				}
+
+				var next = divs.eq(nextIndex);
+
+				next.stop().fadeIn(1500, function() {
+					$j(this).addClass('current');
+				});
+
+				current.stop().fadeOut(1500, function() {
+					$j(this).removeClass('current');
+					_startProgress()
+					setTimeout(fade, 8000);
+				});
+			}
+
+			function _startProgress(){
+				$j(".cbp-qtprogress").removeAttr('style');
+				$j(".cbp-qtprogress").animate({
+					width:"800px",
+				} , 8000);
+			}
+
+			_startProgress()
+			setTimeout(fade, 8000);
+
 });
 
 function getUrlVars() {

@@ -1,11 +1,11 @@
-/*  
+/*
 Theme Name: Yogameister
 Theme URI: http://www.yogameister.co.uk/
 Description: Theme for Yogameister
 Version: 1
 Author: Mark Duwe
 Author URI: http://prydonian.digital
-Tags: 
+Tags:
 License: Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
 License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
 */
@@ -35,23 +35,23 @@ img {
 	float: left;
 	box-shadow: none;
 }
-hr { 
-	height: 30px; 
-	border-style: solid; 
-	border-color: #111; 
-	border-width: 1px 0 0 0; 
-	border-radius: 20px; 
+hr {
+	height: 30px;
+	border-style: solid;
+	border-color: #111;
+	border-width: 1px 0 0 0;
+	border-radius: 20px;
 	margin-top: 40px;
 	margin-bottom: 0;
 }
 hr:before {
-	display: block; 
-	content: ""; 
-	height: 30px; 
-	margin-top: -31px; 
-	border-style: solid; 
-	border-color: #111; 
-	border-width: 0 0 1px 0; 
+	display: block;
+	content: "";
+	height: 30px;
+	margin-top: -31px;
+	border-style: solid;
+	border-color: #111;
+	border-width: 0 0 1px 0;
 	border-radius: 20px;
 }
 a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -72,13 +72,13 @@ a:hover {
      margin-bottom: 0;
 }
 .navbar ul {
-	line-height: 
+	line-height:
 }
 .navbar ul li > a {
 	text-decoration: none;
 	color: #fff;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
-	font-weight: 300;
+	font-weight: 600;
 	padding: 0 8px;
 	text-transform: uppercase;
 }
@@ -89,11 +89,11 @@ a:hover {
 }
 .navbar li .dropdown ul > li a {
 	background: #111;
-	color: #fff;	
+	color: #fff;
 }
 .gumby-no-touch .navbar li .dropdown ul > li a:hover , .gumby-no-touch .navbar li .dropdown ul > li.current-menu-item a {
 	background: #868d92;
-	color: #fff;	
+	color: #fff;
 }
 .navbar .menu {
 	float: left;
@@ -181,7 +181,7 @@ a.cart:hover {
 #gmap {
 	width: 100%;
 	max-width: 100%;
-	height: 320px;
+	height: 520px;
 }
 .label label {
 	color: #111;
@@ -478,6 +478,17 @@ div.image:hover .overlay {
 #espresso_calendar, .event-content, #ee-spco-attendee_information-reg-step-form {
 	margin-bottom: 90px;
 }
+.cnt ul, .cnt ol {
+	margin-left: 20px;
+	padding-left: 15px;
+	list-style: disc;
+}
+.mCSB_container.mCS_no_scrollbar {
+    margin-right: 0;
+}
+.mCSB_container {
+    margin-right: 0;
+}
 .fb-social-plugin, .fb-social-plugin span, .fb-social-plugin iframe {
 	width: 100% !important;
 }
@@ -486,4 +497,92 @@ div.image:hover .overlay {
 }
 #quoteauthor:before {
 	content: "- "
+}
+.cbp-qtrotator {
+	position: relative;
+	margin: 0 auto 5em auto;
+	max-width: 800px;
+	width: 100%;
+	min-height: 400px;
+}
+
+.cbp-qtrotator .cbp-qtcontent {
+	position: absolute;
+	min-height: 200px;
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+	padding: 2em 0;
+	top: 0;
+	z-index: 0;
+	opacity: 0;
+	width: 100%;
+}
+
+.no-js .cbp-qtrotator .cbp-qtcontent {
+	border-bottom: none;
+}
+
+/* Currently visible */
+.cbp-qtrotator .cbp-qtcontent.current,
+.no-js .cbp-qtrotator .cbp-qtcontent {
+	position: relative;
+	z-index: 100;
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.cbp-qtrotator .cbp-qtcontent:before,
+.cbp-qtrotator .cbp-qtcontent:after {
+	content: " ";
+	display: table;
+}
+
+.cbp-qtrotator .cbp-qtcontent:after {
+	clear: both;
+}
+
+.cbp-qtprogress {
+	position: absolute;
+	background: #47a3da;
+	height: 1px;
+	width: 0%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-qtrotator blockquote {
+
+}
+
+.cbp-qtrotator blockquote p, blockquote p {
+	font-style: italic;
+	color: #444;
+}
+
+.cbp-qtrotator blockquote footer {
+}
+
+.cbp-qtrotator blockquote footer:before {
+	content: '? ';
+}
+
+.cbp-qtrotator .cbp-qtcontent img {
+	float: right;
+	margin-left: 3em;
+}
+
+.eventCardExtendedCnt {
+	float: left;
+	margin: 0.333% 0.333% 0.333% 0 !important;
+}
+
+/* Example for media query */
+@media screen and (max-width: 30.6em) {
+
+	.cbp-qtrotator {
+	}
+
+	.cbp-qtrotator img {
+	}
+
 }

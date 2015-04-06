@@ -14,14 +14,15 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div class="navbar" id="ymnav" role="navigation">
 	<div class="row">
-		<a class="toggle" gumby-trigger="#ymnav ul.nine" href="#"><i class="icon-menu"></i></a>	
+		<a class="toggle" gumby-trigger="#ymnav ul.nine" href="#"><i class="icon-menu"></i></a>
 		<h1 class="three columns logo">
 			<a href="<?php bloginfo('url'); ?>">
 				<img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php bloginfo('title'); ?>" title="<?php bloginfo('title'); ?>" gumby-retina />
 			</a>
-		</h1>		
+		</h1>
 		<?php wp_nav_menu( array( 'theme_location' => 'ymmenu', 'container' => false, 'menu_class' => 'nine columns', 'walker' => new Walker_Page_Custom ) ); ?>
 	</div>
 </div>

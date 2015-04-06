@@ -18,7 +18,7 @@
 			  'connected_type' => 'class_location',
 			  'connected_items' => $post,
 			  'nopaging' => true,
-			) );		
+			) );
 			if ( $connected->have_posts() ) :
 			?>
 			<h5>Locations:</h5>
@@ -27,9 +27,9 @@
 			    <li><i class="icon-direction"></i><a href="<?php the_permalink(); ?>"><?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); if( $rooms != '' ) :  ?>Room <?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); echo $rooms;  ?>, <?php endif; ?><?php the_title(); ?></a></li>
 			<?php endwhile; ?>
 			</ul>
-			
-			<?php 
-			wp_reset_postdata();		
+
+			<?php
+			wp_reset_postdata();
 			endif;
 		?>
 		<?php
@@ -37,7 +37,7 @@
 			  'connected_type' => 'class_teacher',
 			  'connected_items' => $post,
 			  'nopaging' => true,
-			) );		
+			) );
 			if ( $connected->have_posts() ) :
 			?>
 			<h5>Teacher:</h5>
@@ -46,9 +46,9 @@
 			    <li><i class="icon-graduation-cap"></i><a href="<?php the_permalink(); ?>"><?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); if( $rooms != '' ) :  ?>Room <?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); echo $rooms;  ?>, <?php endif; ?><?php the_title(); ?></a></li>
 			<?php endwhile; ?>
 			</ul>
-			
-			<?php 
-			wp_reset_postdata();		
+
+			<?php
+			wp_reset_postdata();
 			endif;
 		?>
 	</div>
@@ -63,7 +63,7 @@
 			  'connected_type' => 'class_location',
 			  'connected_items' => $post,
 			  'nopaging' => true,
-			) );		
+			) );
 			if ( $connected->have_posts() ) :
 			?>
 			<h5>Locations:</h5>
@@ -72,9 +72,9 @@
 			    <li><i class="icon-direction"></i><a href="<?php the_permalink(); ?>"><?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); if( $rooms != '' ) :  ?>Room <?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); echo $rooms;  ?>, <?php endif; ?><?php the_title(); ?></a></li>
 			<?php endwhile; ?>
 			</ul>
-			
-			<?php 
-			wp_reset_postdata();		
+
+			<?php
+			wp_reset_postdata();
 			endif;
 		?>
 		<?php
@@ -82,7 +82,7 @@
 			  'connected_type' => 'class_teacher',
 			  'connected_items' => $post,
 			  'nopaging' => true,
-			) );		
+			) );
 			if ( $connected->have_posts() ) :
 			?>
 			<h5>Teacher:</h5>
@@ -91,9 +91,9 @@
 			    <li><i class="icon-graduation-cap"></i><a href="<?php the_permalink(); ?>"><?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); if( $rooms != '' ) :  ?>Room <?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); echo $rooms;  ?>, <?php endif; ?><?php the_title(); ?></a></li>
 			<?php endwhile; ?>
 			</ul>
-			
-			<?php 
-			wp_reset_postdata();		
+
+			<?php
+			wp_reset_postdata();
 			endif;
 		?>
 	</div>

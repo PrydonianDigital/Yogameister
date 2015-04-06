@@ -3,12 +3,10 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <div <?php post_class('row'); ?>>
-	<div class="three columns">
-		<?php the_post_thumbnail(); ?>
-	</div>
-	<div class="nine columns">
+	<div class="twelve columns">
 		<h3><?php the_title(); ?></h3>
 		<?php the_content(); ?>
+		<?php the_post_thumbnail('full'); ?>
 	</div>
 </div>
 

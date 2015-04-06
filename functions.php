@@ -1,5 +1,5 @@
 <?php
-	
+
 if ( ! isset( $content_width ) )
 	$content_width = 940;
 
@@ -75,46 +75,6 @@ register_sidebar( array(
 	'after_widget' => '</li>',
 ));
 
-// Register Carousel Post Type
-function carousel() {
-	$labels = array(
-		'name'				=> _x( 'Carousels', 'Post Type General Name', 'ym' ),
-		'singular_name'	   => _x( 'Carousel', 'Post Type Singular Name', 'ym' ),
-		'menu_name'		   => __( 'Carousels', 'ym' ),
-		'parent_item_colon'   => __( 'Parent Carousel:', 'ym' ),
-		'all_items'		   => __( 'All Carousels', 'ym' ),
-		'view_item'		   => __( 'View Carousel', 'ym' ),
-		'add_new_item'		=> __( 'Add New Carousel', 'ym' ),
-		'add_new'			 => __( 'Add New', 'ym' ),
-		'edit_item'		   => __( 'Edit Carousel', 'ym' ),
-		'update_item'		 => __( 'Update Carousel', 'ym' ),
-		'search_items'		=> __( 'Search Carousel', 'ym' ),
-		'not_found'		   => __( 'Not found', 'ym' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'ym' ),
-	);
-	$args = array(
-		'label'			   => __( 'carousel', 'ym' ),
-		'description'		 => __( 'Home Page Carousel', 'ym' ),
-		'labels'			  => $labels,
-		'supports'			=> array( 'title', 'thumbnail', ),
-		'taxonomies'		  => array( 'category', 'post_tag' ),
-		'hierarchical'		=> false,
-		'public'			  => true,
-		'show_ui'			 => true,
-		'show_in_menu'		=> true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'	   => 5,
-		'can_export'		  => true,
-		'has_archive'		 => false,
-		'exclude_from_search' => true,
-		'publicly_queryable'  => true,
-		'capability_type'	 => 'page',
-	);
-	register_post_type( 'carousel', $args );
-}
-add_action( 'init', 'carousel', 0 );
-
 // Register Location Post Type
 function location() {
 	$labels = array(
@@ -136,7 +96,7 @@ function location() {
 		'label'			   => __( 'locations', 'ym' ),
 		'description'		 => __( 'Locations', 'ym' ),
 		'labels'			  => $labels,
-		'supports'			=> array('title', 'thumbnail' ),
+		'supports'			=> array('title', 'thumbnail', 'editor'),
 		'taxonomies'		  => array( ),
 		'hierarchical'		=> false,
 		'public'			  => true,
@@ -260,48 +220,6 @@ function my_theme_wrapper_end() {
 	echo '</div></div>';
 }
 
-function carousel_link( $meta_boxes ) {
-	$prefix = '_cmb_';
-	$meta_boxes[] = array(
-		'id' => 'meta',
-		'title' => 'Carousel Link',
-		'pages' => array('carousel'),
-		'context' => 'normal',
-		'priority' => 'high',
-		'show_names' => true,
-		'fields' => array(
-			array(
-				'name' => __( 'Link to page', 'ym' ),
-				'id' => $prefix . 'url',
-				'type' => 'text_url',
-			),
-		),
-	);
-	return $meta_boxes;
-}
-add_filter( 'cmb_meta_boxes', 'carousel_link' );
-
-function class_dates( $meta_boxes ) {
-	$prefix = '_cmb_';
-	$meta_boxes[] = array(
-		'id' => 'meta',
-		'title' => 'Class Details',
-		'pages' => array('class'),
-		'context' => 'normal',
-		'priority' => 'high',
-		'show_names' => true,
-		'fields' => array(
-			array(
-				'name' => __( 'Link to page', 'ym' ),
-				'id' => $prefix . 'url',
-				'type' => 'text',
-			),
-		),
-	);
-	return $meta_boxes;
-}
-add_filter( 'cmb_meta_boxes', 'class_dates' );
-
 function location_details( $meta_boxes ) {
 	$prefix = '_cmb_';
 	$meta_boxes[] = array(
@@ -312,13 +230,6 @@ function location_details( $meta_boxes ) {
 		'priority' => 'high',
 		'show_names' => true,
 		'fields' => array(
-			array(
-				'name' => __( 'Booking Button', 'ym' ),
-				'textarea_rows' => get_option('default_post_edit_rows', 2),
-				'teeny' => true,
-				'id' => $prefix . 'bb',
-				'type' => 'wysiwyg',
-			),
 			array(
 				'name' => __( 'Street Address', 'ym' ),
 				'id' => $prefix . 'street',
@@ -472,3 +383,5 @@ function wpclean_metabox_menu_posttype_archive() {
 	endif;
 }
 add_action('admin_head-nav-menus.php', 'wpclean_add_metabox_menu_posttype_archive');
+
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
