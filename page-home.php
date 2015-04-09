@@ -16,7 +16,6 @@
 			) );
 			if ( $connected->have_posts() ) :
 			?>
-			<h4>Testimonial</h4>
 			<blockquote>
 			<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
 				<?php the_content(); ?>
@@ -24,6 +23,9 @@
 			<?php endwhile; ?>
 			</blockquote>
 			<?php wp_reset_postdata(); endif; ?>
+
+			<h4>Class Calendar</h4>
+			<?php echo do_shortcode('[eventCalendar]'); ?>
 
 		<?php endwhile; ?>
 

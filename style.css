@@ -63,9 +63,19 @@ a:hover {
 .navbar {
 	background: transparent;
 }
+.navbar .logo a {
+    display: block;
+    height: 58px;
+    line-height: 58px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+}
 .navbar .logo a img {
-	margin-top: 2.5%;
 	box-shadow: none !important;
+	position: absolute;
+	width: 90%;
+	height: auto;
 }
 .navbar#nav2 {
      margin-top: 20px;
