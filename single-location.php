@@ -6,7 +6,7 @@
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<h2><?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); if( $rooms != '' ) :  ?>Room <?php global $post; $rooms = get_post_meta( $post->ID, '_cmb_room', true ); echo $rooms;  ?>, <?php endif; ?><?php the_title(); ?></h2>
+			<h2><?php the_title(); ?></h2>
 
 			<?php global $post; $street = get_post_meta( $post->ID, '_cmb_street', true ); if( $street != '' ) :  ?>
 				<p><?php global $post; $street = get_post_meta( $post->ID, '_cmb_street', true ); echo $street;  ?></p>

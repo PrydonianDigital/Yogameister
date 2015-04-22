@@ -16,6 +16,9 @@ body {
 	background-attachment: fixed;
 	color: #333;
 }
+p {
+	line-height: 1.5 !important;
+}
 table {
 	background-color: transparent;
 }
@@ -34,6 +37,10 @@ img {
 	margin: 0 10px 0 0;
 	float: left;
 	box-shadow: none;
+}
+#footer .right img {
+	float: none;
+	margin: 0;
 }
 hr {
 	height: 30px;
@@ -68,7 +75,7 @@ a:hover {
     height: 58px;
     line-height: 58px;
     overflow: hidden;
-    padding: 10px;
+    padding: 10px 0;
     position: relative;
 }
 .navbar .logo a img {
@@ -188,10 +195,23 @@ a.cart:hover {
 	float: right !important;
 	margin: 0 0 0 20px;
 }
-#gmap {
+#map {
 	width: 100%;
 	max-width: 100%;
-	height: 520px;
+	height: 320px;
+}
+#map img {
+	max-width: none !important;
+}
+table tr td:first-child {
+	font-weight: normal;
+}
+table tr td {
+	width: 50%;
+}
+table tr th {
+	font-weight: bold;
+	padding: 10px;
 }
 .label label {
 	color: #111;
@@ -515,19 +535,6 @@ div.image:hover .overlay {
 	width: 100%;
 	min-height: 400px;
 }
-
-.cbp-qtrotator .cbp-qtcontent {
-	position: absolute;
-	min-height: 200px;
-	border-top: 1px solid #f4f4f4;
-	border-bottom: 1px solid #f4f4f4;
-	padding: 2em 0;
-	top: 0;
-	z-index: 0;
-	opacity: 0;
-	width: 100%;
-}
-
 .no-js .cbp-qtrotator .cbp-qtcontent {
 	border-bottom: none;
 }
@@ -540,59 +547,112 @@ div.image:hover .overlay {
 	pointer-events: auto;
 	opacity: 1;
 }
-
 .cbp-qtrotator .cbp-qtcontent:before,
 .cbp-qtrotator .cbp-qtcontent:after {
 	content: " ";
 	display: table;
 }
-
 .cbp-qtrotator .cbp-qtcontent:after {
 	clear: both;
 }
-
-.cbp-qtprogress {
-	position: absolute;
-	background: #47a3da;
-	height: 1px;
-	width: 0%;
-	top: 0;
-	z-index: 1000;
-}
-
 .cbp-qtrotator blockquote {
-
 }
-
 .cbp-qtrotator blockquote p, blockquote p {
 	font-style: italic;
 	color: #444;
 }
-
 .cbp-qtrotator blockquote footer {
 }
-
 .cbp-qtrotator blockquote footer:before {
 	content: '? ';
 }
-
 .cbp-qtrotator .cbp-qtcontent img {
 	float: right;
 	margin-left: 3em;
 }
-
 .eventCardExtendedCnt {
 	float: left;
 	margin: 0.333% 0.333% 0.333% 0 !important;
 }
+dt {
+	font-weight: 700;
+	display: block;
+	padding: 5px 10px;
+	margin: 10px 0 5px 0;
+	border-bottom: 1px solid #e5e5e5;
+	clear: both;
+}
+dt:first-child {
+	margin-top: 0;
+}
+dd {
+	display: block;
+	margin-left: 150px;
+	position: relative;
+}
+dd .eventBtnCnt {
+	float: right !important;
+	position: absolute;
+	right: 0;
+	top: -80px;
+}
+dd:nth-child(5n+5) {
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+dd .buy {
+	margin: 0 !important;
+}
+.right {
+	text-align: right;
+}
+small {
+	font-size: 0.7rem;
+}
+.contact-form input, .contact-form textarea {
+  position: relative;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  height: 36px;
+  line-height: 34px;
+  font-size: 16px;
+  font-size: 1rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+ .contact-form textarea {
+	 height: 120px;
+ }
+ .contact-form label span {
+    color: #8f8f8f;
+    font-weight: 400;
+    margin-left: 4px;
+}
 
 /* Example for media query */
-@media screen and (max-width: 30.6em) {
-
-	.cbp-qtrotator {
+@media only screen and (max-width: 767px) {
+	.navbar .logo a img {
+		height: 100%;
+		width: auto;
+		position: relative !important;
 	}
-
-	.cbp-qtrotator img {
+	dt {
+		font-weight: 700;
+		display: block;
 	}
-
+	dd {
+		display: block;
+		margin-left: 0;
+	}
+	dd .eventBtnCnt {
+		float: none !important;
+		position: relative !important;
+		right: 0;
+		top: 0;
+	}
 }

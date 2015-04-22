@@ -1,15 +1,46 @@
 <?php get_header(); ?>
 
+<div class="row">
+	<div class="twelve columns">
+		<div id="map"></div>
+<script>
+$(function() {
+	jQuery("#map").gmap3({
+		map:{
+			options:{
+				center:[51.4985931,-0.0388206],
+				zoom:16,
+				mapTypeId: google.maps.MapTypeId.TERRAIN,
+				mapTypeControl: true,
+				mapTypeControlOptions: {
+					style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+				},
+				navigationControl: true,
+				scrollwheel: true,
+				streetViewControl: true
+			}
+		},
+		marker:{
+			values:[
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				{address:"<?php global $post; $street = get_post_meta( $post->ID, '_cmb_street', true ); if( $street != '' ) :  ?><?php global $post; $street = get_post_meta( $post->ID, '_cmb_street', true ); echo $street;  ?><?php endif; ?>, <?php global $post; $town = get_post_meta( $post->ID, '_cmb_town', true ); if( $town != '' ) :  ?><?php global $post; $town = get_post_meta( $post->ID, '_cmb_town', true ); echo $town;  ?><?php endif; ?>, <?php global $post; $postcode = get_post_meta( $post->ID, '_cmb_postcode', true ); if( $postcode != '' ) :  ?><?php global $post; $postcode = get_post_meta( $post->ID, '_cmb_postcode', true ); echo $postcode;  ?><?php endif; ?>", data:"<?php the_title(); ?>"},
+				<?php endwhile; ?><?php endif; ?>
+			],
+			options:{
+				draggable: false
+			}
+		}
+	});
+});
+</script>
+	</div>
+</div>
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <div <?php post_class('row'); ?>>
 
-	<div class="three columns">
-		<?php global $post; $gmi = get_post_meta( $post->ID, '_cmb_gmi', true ); if( $gmi != '' ) :  ?>
-			<p><iframe id="gmap" src="<?php global $post; $gmi = get_post_meta( $post->ID, '_cmb_gmi', true ); echo $gmi;  ?>" frameborder="0" width="600" height="400"></iframe></p>
-		<?php endif; ?>
-	</div>
-	<div class="nine columns">
+	<div class="twelve columns">
 
 		<h3><?php the_title(); ?></h3>
 
