@@ -26,7 +26,7 @@
 	<div class="row">
 		<div class="eight columns">
 			<a href="http://www.yogaalliance.co.uk/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/RYS50.png" alt="RYT" width="50" height="49" /></a> <a href="http://www.yogaalliance.co.uk/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/RYTP50.png" alt="RYTP" width="50" height="49" /></a>
-			&copy <?php the_date('Y'); ?> <?php bloginfo('name'); ?>. <small>Patricia is a registered SYT teacher and Prenatal yoga teacher with the Yoga Alliance UK. This accreditation demonstrates excellent standards as set by the Yoga Alliance UK.</small>
+			&copy <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <small>Patricia is a registered SYT teacher and Prenatal yoga teacher with the Yoga Alliance UK. This accreditation demonstrates excellent standards as set by the Yoga Alliance UK.</small>
 		</div>
 		<div class="four columns right">
 			<p><small>Site by <a href="http://prydonian.digital/" target="_blank" rel="author" title="Prydonian Digital"><img src="<?php bloginfo('template_url'); ?>/img/pd.png" alt="pd" width="16" height="16" /> Prydonian Digital</a></small></p>

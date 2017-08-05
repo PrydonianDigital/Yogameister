@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="a3Hj-L3B6jy9EfNoolSaFSULcIbNO24N7SIOYXtMiNg" />
-<title><?php wp_title('¦', true, 'right'); ?><?php bloginfo('name'); ?> ¦ <?php bloginfo('description'); ?></title>
+<title><?php wp_title('¦', true, 'right'); ?></title>
 <?php wp_head(); ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 </head>
